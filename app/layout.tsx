@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body style={{ margin: 0 }} className={inter.className}>
         <RecoilRoot>
           <Nav />
           {children}

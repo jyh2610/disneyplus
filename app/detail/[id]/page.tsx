@@ -1,4 +1,4 @@
-import DetailMain from "../../components/detail/Detail";
+import DetailMain from "../../../components/detail/Detail";
 
 export default function Detail() {
   return (
