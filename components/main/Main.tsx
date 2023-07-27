@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface Movie {
-  backdrop_path: string;
+  name: string;
   id: string;
   // Add other properties specific to the movie object here
 }
@@ -17,19 +17,15 @@ interface Props {
     // Add other properties if needed from the API response
   };
 }
-function Main(props: Props) {
-  const [movies, setData] = useState<Movie[]>(props.data.results);
+function Main(props: any) {
+  // const [movies, setData] = useState<Movie[]>(props.data.results);
   const pathname = usePathname();
-  console.log(movies);
+  console.log(props);
   return (
     <Grid>
-      {movies.map((movie, i) => (
+      {/* {movies.map((movie, i) => (
         <div key={i}>
-          <Link
-            href={{
-              pathname: `/detail/${movie.id}`,
-            }}
-          >
+          <Link href="/detail/[id]" as={`/detail/${movie.id}`}>
             <Image
               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
               alt="movie"
@@ -38,7 +34,7 @@ function Main(props: Props) {
             />
           </Link>
         </div>
-      ))}
+      ))} */}
     </Grid>
   );
 }
